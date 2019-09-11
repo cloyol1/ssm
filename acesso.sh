@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 echo "Qual Profile vai utilizar?"
 read profile
 export AWS_PROFILE=$profile
