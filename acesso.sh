@@ -10,3 +10,5 @@ echo "Qual a Região da Instancia"
 read region
 
 aws ssm start-session --target $id --region $region
+
+teste
