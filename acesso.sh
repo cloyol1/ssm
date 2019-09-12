@@ -12,12 +12,12 @@ if [[ $(wc -l instancias.txt | cut -d\  -f1 2> /dev/null) -gt 0 ]]
 then
 	
   echo "Ids encontrados no profile $profile"
-	cat instancias.txt
+	cat -n instancias.txt | awk '{print $1, $3}' | sed 's/"//g' | sed 's/,//g'
+	read -p "Escolha um ID: " id 
+	selecionado=`sed "$id" instancias.txt`
+	echo "O ID escolhido é: " $selecionado
 	
-	echo "Escolha o Id para acesso"
-	read id
-	
-	aws ssm start-session --target $id --region $region
+	aws ssm start-session --target $selecionado --region $region
 	
 else
 	
