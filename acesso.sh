@@ -24,6 +24,11 @@ then
   echo "Ids encontrados no profile $profile"
 	cat -n instancias.txt
 	read -p "Escolha o ID: " id 
+	selecionado=`sed "$id !d" instancias.txt | awk '{print $1}' | sed 's/"//g;s/,//g'`
+	echo "O ID escolhido é: " $selecionado
+	
+	aws ssm start-session --target $selecionado --region $region
+
 
 else
 	
