@@ -1,6 +1,0 @@
-i-0a64322349ceb1735	viallure-admin
-i-009673afa1f594fdc	viallure-node
-i-085759169caa1995c	viallure-cache
-i-0f76f8cd5ba11cc16	viallure-node
-i-06ae02bc56c08f098	Jenkins
-i-d7deb7d9	staging
