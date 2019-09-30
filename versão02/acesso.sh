@@ -1,4 +1,5 @@
 #!/bin/bash
+####Dependência pip3 install aws-ssm-tools####
 
 ##### setar o profile e exporta para variavel de Ambiente #####
 echo "Qual Profile vai utilizar ?"
